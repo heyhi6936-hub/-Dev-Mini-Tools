@@ -15,6 +15,7 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
+        'react-router-dom': path.resolve(__dirname, 'node_modules/react-router-dom/dist/index.mjs')
       }
     },
     build: {
@@ -22,7 +23,11 @@ export default defineConfig(({ mode }) => {
       emptyOutDir: true,
     },
     ssr: {
-      noExternal: ['react-helmet-async']
+      noExternal: ['react-helmet-async', 'react-router-dom', 'react-router'],
+      resolve: {
+        conditions: ['import', 'module', 'node', 'default'],
+        externalConditions: ['import', 'module', 'node', 'default']
+      }
     }
   };
 });
