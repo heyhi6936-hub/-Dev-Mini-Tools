@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const ToolCard = ({ title, description, icon, to, color }: { title: string; description: string; icon: string; to: string; color: string }) => (
   <Link to={to} className="group h-full p-[1px] rounded-3xl bg-gradient-to-br from-brand-500/35 via-glow-500/30 to-slate-900 shadow-lg shadow-brand-500/10 hover:shadow-brand-500/25 transition-all">
@@ -23,6 +24,11 @@ const ToolCard = ({ title, description, icon, to, color }: { title: string; desc
 const Home: React.FC = () => {
   return (
     <div className="pb-20">
+      <Helmet>
+        <title>Dev Mini Tools | Fast, Local-First Developer Utilities</title>
+        <meta name="description" content="A comprehensive suite of developer tools including JSON Formatter, CSS Minifier, Regex Tester, and more. All tools run locally in your browser for maximum privacy." />
+        <link rel="canonical" href="https://devminitools.xyz/" />
+      </Helmet>
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 -z-10">
           <div className="absolute -top-16 left-1/3 w-[420px] h-[420px] bg-brand-500/15 blur-3xl" />
