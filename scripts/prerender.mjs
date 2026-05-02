@@ -73,7 +73,7 @@ async function generate() {
 
       // Inject Helmet tags (title, meta) and App HTML
       const html = template
-        .replace('<!--app-head-->', `
+        .replace('<!--helmet-tags-->', `
           ${helmet?.title?.toString() || ''}
           ${helmet?.meta?.toString() || ''}
           ${helmet?.link?.toString() || ''}

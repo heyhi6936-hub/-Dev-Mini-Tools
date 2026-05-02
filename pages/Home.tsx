@@ -40,7 +40,7 @@ const Home: React.FC = () => {
           <div className="space-y-6">
             <span className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-brand-50 text-brand-700 border border-brand-100 text-xs font-semibold uppercase tracking-[0.2em]">No signups · Local-first</span>
             <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 dark:text-white leading-tight drop-shadow-glow">
-              Dev Mini Tools for builders who ship fast.
+              Free Online Developer Tools — No Signup Required
             </h1>
             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
               A focused toolbox for formatting, testing, and tidying code. Everything runs in your browser—secure, instant, and distraction-free.

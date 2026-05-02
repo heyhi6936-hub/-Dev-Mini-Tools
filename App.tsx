@@ -196,7 +196,7 @@ const Footer = () => (
         <a href="#" className="hover:text-brand-500 transition-colors"><i className="fab fa-github text-xl"></i></a>
         <a href="#" className="hover:text-brand-500 transition-colors"><i className="fab fa-twitter text-xl"></i></a>
       </div>
-      <p className="text-slate-500 dark:text-slate-400">© 2024 Dev Mini Tools. Crafted for developers, built to stay local.</p>
+      <p className="text-slate-500 dark:text-slate-400">© 2026 Dev Mini Tools. Crafted for developers, built to stay local.</p>
       <div className="text-sm text-slate-400 space-x-4">
         <Link to="/" className="hover:text-brand-600 dark:hover:text-brand-400">Home</Link>
         <Link to="/json-formatter" className="hover:text-brand-600 dark:hover:text-brand-400">JSON Formatter</Link>
