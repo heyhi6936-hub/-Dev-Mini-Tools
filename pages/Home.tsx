@@ -28,6 +28,26 @@ const Home: React.FC = () => {
         <title>Dev Mini Tools | Fast, Local-First Developer Utilities</title>
         <meta name="description" content="A comprehensive suite of developer tools including JSON Formatter, CSS Minifier, Regex Tester, and more. All tools run locally in your browser for maximum privacy." />
         <link rel="canonical" href="https://devminitools.xyz/" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebSite",
+                "@id": "https://devminitools.xyz/#website",
+                "url": "https://devminitools.xyz/",
+                "name": "Dev Mini Tools",
+                "description": "Fast, Local-First Developer Utilities"
+              },
+              {
+                "@type": "Organization",
+                "@id": "https://devminitools.xyz/#organization",
+                "name": "Dev Mini Tools",
+                "url": "https://devminitools.xyz/"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 -z-10">
