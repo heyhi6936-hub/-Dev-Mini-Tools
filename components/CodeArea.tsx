@@ -38,6 +38,7 @@ const CodeArea: React.FC<CodeAreaProps> = ({ label, value, onChange, placeholder
           placeholder={placeholder}
           readOnly={readOnly}
           spellCheck={false}
+          aria-label={label}
         />
       </div>
     </div>

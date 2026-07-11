@@ -2,46 +2,46 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
-import JsonFormatter from './pages/JsonFormatter';
-import CssMinifier from './pages/CssMinifier';
-import HtmlBeautifier from './pages/HtmlBeautifier';
-import Base64Tool from './pages/Base64Tool';
-import RegexTester from './pages/RegexTester';
-import UuidTool from './pages/UuidTool';
-import JwtDecoder from './pages/JwtDecoder';
-import TimestampTool from './pages/TimestampTool';
-import UrlEncoder from './pages/UrlEncoder';
-import TextCaseTool from './pages/TextCaseTool';
-import ColorConverter from './pages/ColorConverter';
-import HtmlMinifier from './pages/HtmlMinifier';
-import CssFormatter from './pages/CssFormatter';
-import JsBeautifier from './pages/JsBeautifier';
-import JsMinifier from './pages/JsMinifier';
-import HtmlEncoder from './pages/HtmlEncoder';
-import RegexCheatSheet from './pages/RegexCheatSheet';
-import LoremIpsum from './pages/LoremIpsum';
-import TextDiffTool from './pages/TextDiffTool';
-import MetaTagGenerator from './pages/MetaTagGenerator';
-import RobotsTxtGenerator from './pages/RobotsTxtGenerator';
-import SitemapGenerator from './pages/SitemapGenerator';
-import OpenGraphGenerator from './pages/OpenGraphGenerator';
-import ImageToBase64 from './pages/ImageToBase64';
-import Base64ToImage from './pages/Base64ToImage';
-import CssGradientGenerator from './pages/CssGradientGenerator';
-import BoxShadowGenerator from './pages/BoxShadowGenerator';
-import JsonToCsv from './pages/JsonToCsv';
-import CsvToJson from './pages/CsvToJson';
-import XmlToJson from './pages/XmlToJson';
-import PasswordGenerator from './pages/PasswordGenerator';
-import HashGenerator from './pages/HashGenerator';
-import MinifyAll from './pages/MinifyAll';
-import CodeSnippetManager from './pages/CodeSnippetManager';
-import ApiRequestTester from './pages/ApiRequestTester';
-import HttpStatusChecker from './pages/HttpStatusChecker';
-import MarkdownToHtml from './pages/MarkdownToHtml';
-import HtmlToMarkdown from './pages/HtmlToMarkdown';
-import SqlFormatter from './pages/SqlFormatter';
-import CronJobGenerator from './pages/CronJobGenerator';
+const JsonFormatter = React.lazy(() => import('./pages/JsonFormatter'));
+const CssMinifier = React.lazy(() => import('./pages/CssMinifier'));
+const HtmlBeautifier = React.lazy(() => import('./pages/HtmlBeautifier'));
+const Base64Tool = React.lazy(() => import('./pages/Base64Tool'));
+const RegexTester = React.lazy(() => import('./pages/RegexTester'));
+const UuidTool = React.lazy(() => import('./pages/UuidTool'));
+const JwtDecoder = React.lazy(() => import('./pages/JwtDecoder'));
+const TimestampTool = React.lazy(() => import('./pages/TimestampTool'));
+const UrlEncoder = React.lazy(() => import('./pages/UrlEncoder'));
+const TextCaseTool = React.lazy(() => import('./pages/TextCaseTool'));
+const ColorConverter = React.lazy(() => import('./pages/ColorConverter'));
+const HtmlMinifier = React.lazy(() => import('./pages/HtmlMinifier'));
+const CssFormatter = React.lazy(() => import('./pages/CssFormatter'));
+const JsBeautifier = React.lazy(() => import('./pages/JsBeautifier'));
+const JsMinifier = React.lazy(() => import('./pages/JsMinifier'));
+const HtmlEncoder = React.lazy(() => import('./pages/HtmlEncoder'));
+const RegexCheatSheet = React.lazy(() => import('./pages/RegexCheatSheet'));
+const LoremIpsum = React.lazy(() => import('./pages/LoremIpsum'));
+const TextDiffTool = React.lazy(() => import('./pages/TextDiffTool'));
+const MetaTagGenerator = React.lazy(() => import('./pages/MetaTagGenerator'));
+const RobotsTxtGenerator = React.lazy(() => import('./pages/RobotsTxtGenerator'));
+const SitemapGenerator = React.lazy(() => import('./pages/SitemapGenerator'));
+const OpenGraphGenerator = React.lazy(() => import('./pages/OpenGraphGenerator'));
+const ImageToBase64 = React.lazy(() => import('./pages/ImageToBase64'));
+const Base64ToImage = React.lazy(() => import('./pages/Base64ToImage'));
+const CssGradientGenerator = React.lazy(() => import('./pages/CssGradientGenerator'));
+const BoxShadowGenerator = React.lazy(() => import('./pages/BoxShadowGenerator'));
+const JsonToCsv = React.lazy(() => import('./pages/JsonToCsv'));
+const CsvToJson = React.lazy(() => import('./pages/CsvToJson'));
+const XmlToJson = React.lazy(() => import('./pages/XmlToJson'));
+const PasswordGenerator = React.lazy(() => import('./pages/PasswordGenerator'));
+const HashGenerator = React.lazy(() => import('./pages/HashGenerator'));
+const MinifyAll = React.lazy(() => import('./pages/MinifyAll'));
+const CodeSnippetManager = React.lazy(() => import('./pages/CodeSnippetManager'));
+const ApiRequestTester = React.lazy(() => import('./pages/ApiRequestTester'));
+const HttpStatusChecker = React.lazy(() => import('./pages/HttpStatusChecker'));
+const MarkdownToHtml = React.lazy(() => import('./pages/MarkdownToHtml'));
+const HtmlToMarkdown = React.lazy(() => import('./pages/HtmlToMarkdown'));
+const SqlFormatter = React.lazy(() => import('./pages/SqlFormatter'));
+const CronJobGenerator = React.lazy(() => import('./pages/CronJobGenerator'));
 
 const Navbar = () => {
   const [isDark, setIsDark] = useState(true);
@@ -169,7 +169,7 @@ const Navbar = () => {
 
           <div className="flex items-center gap-2">
             <Link
-              to="/json-formatter"
+              to="/formatters/json-formatter"
               className="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:-translate-y-0.5 transition-transform shadow-lg shadow-slate-900/15 dark:shadow-white/20"
             >
               <i className="fas fa-play text-xs"></i>
@@ -199,9 +199,9 @@ const Footer = () => (
       <p className="text-slate-500 dark:text-slate-400">© 2026 Dev Mini Tools. Crafted for developers, built to stay local.</p>
       <div className="text-sm text-slate-400 space-x-4">
         <Link to="/" className="hover:text-brand-600 dark:hover:text-brand-400">Home</Link>
-        <Link to="/json-formatter" className="hover:text-brand-600 dark:hover:text-brand-400">JSON Formatter</Link>
-        <Link to="/css-minifier" className="hover:text-brand-600 dark:hover:text-brand-400">CSS Minifier</Link>
-        <Link to="/regex-tester" className="hover:text-brand-600 dark:hover:text-brand-400">Regex Tester</Link>
+        <Link to="/formatters/json-formatter" className="hover:text-brand-600 dark:hover:text-brand-400">JSON Formatter</Link>
+        <Link to="/formatters/css-minifier" className="hover:text-brand-600 dark:hover:text-brand-400">CSS Minifier</Link>
+        <Link to="/testers/regex-tester" className="hover:text-brand-600 dark:hover:text-brand-400">Regex Tester</Link>
       </div>
     </div>
   </footer>
@@ -222,49 +222,51 @@ const App: React.FC = () => {
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
+          <React.Suspense fallback={<div className="flex h-[60vh] items-center justify-center text-slate-400"><i className="fas fa-circle-notch fa-spin text-3xl"></i></div>}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/json-formatter" element={<JsonFormatter />} />
-            <Route path="/css-formatter" element={<CssFormatter />} />
-            <Route path="/css-minifier" element={<CssMinifier />} />
-            <Route path="/html-beautifier" element={<HtmlBeautifier />} />
-            <Route path="/html-minifier" element={<HtmlMinifier />} />
-            <Route path="/js-beautifier" element={<JsBeautifier />} />
-            <Route path="/js-minifier" element={<JsMinifier />} />
-            <Route path="/base64-encoder-decoder" element={<Base64Tool />} />
-            <Route path="/url-encoder" element={<UrlEncoder />} />
-            <Route path="/html-encoder" element={<HtmlEncoder />} />
-            <Route path="/regex-tester" element={<RegexTester />} />
-            <Route path="/regex-cheats" element={<RegexCheatSheet />} />
-            <Route path="/uuid-generator" element={<UuidTool />} />
-            <Route path="/jwt-decoder" element={<JwtDecoder />} />
-            <Route path="/timestamp-converter" element={<TimestampTool />} />
-            <Route path="/text-case" element={<TextCaseTool />} />
-            <Route path="/lorem-ipsum" element={<LoremIpsum />} />
-            <Route path="/text-diff" element={<TextDiffTool />} />
-            <Route path="/color-converter" element={<ColorConverter />} />
-            <Route path="/meta-tags" element={<MetaTagGenerator />} />
-            <Route path="/robots-txt" element={<RobotsTxtGenerator />} />
-            <Route path="/sitemap-xml" element={<SitemapGenerator />} />
-            <Route path="/open-graph" element={<OpenGraphGenerator />} />
-            <Route path="/image-to-base64" element={<ImageToBase64 />} />
-            <Route path="/base64-to-image" element={<Base64ToImage />} />
-            <Route path="/css-gradient" element={<CssGradientGenerator />} />
-            <Route path="/box-shadow" element={<BoxShadowGenerator />} />
-            <Route path="/json-to-csv" element={<JsonToCsv />} />
-            <Route path="/csv-to-json" element={<CsvToJson />} />
-            <Route path="/xml-to-json" element={<XmlToJson />} />
-            <Route path="/password-generator" element={<PasswordGenerator />} />
-            <Route path="/hash-generator" element={<HashGenerator />} />
-            <Route path="/minify-all" element={<MinifyAll />} />
-            <Route path="/code-snippets" element={<CodeSnippetManager />} />
-            <Route path="/api-tester" element={<ApiRequestTester />} />
-            <Route path="/http-status" element={<HttpStatusChecker />} />
-            <Route path="/md-to-html" element={<MarkdownToHtml />} />
-            <Route path="/html-to-md" element={<HtmlToMarkdown />} />
-            <Route path="/sql-formatter" element={<SqlFormatter />} />
-            <Route path="/cron-generator" element={<CronJobGenerator />} />
+            <Route path="/formatters/json-formatter" element={<JsonFormatter />} />
+            <Route path="/formatters/css-formatter" element={<CssFormatter />} />
+            <Route path="/formatters/css-minifier" element={<CssMinifier />} />
+            <Route path="/formatters/html-beautifier" element={<HtmlBeautifier />} />
+            <Route path="/formatters/html-minifier" element={<HtmlMinifier />} />
+            <Route path="/formatters/js-beautifier" element={<JsBeautifier />} />
+            <Route path="/formatters/js-minifier" element={<JsMinifier />} />
+            <Route path="/encoders/base64-encoder-decoder" element={<Base64Tool />} />
+            <Route path="/encoders/url-encoder" element={<UrlEncoder />} />
+            <Route path="/encoders/html-encoder" element={<HtmlEncoder />} />
+            <Route path="/testers/regex-tester" element={<RegexTester />} />
+            <Route path="/cheatsheets/regex-cheats" element={<RegexCheatSheet />} />
+            <Route path="/generators/uuid-generator" element={<UuidTool />} />
+            <Route path="/security/jwt-decoder" element={<JwtDecoder />} />
+            <Route path="/converters/timestamp-converter" element={<TimestampTool />} />
+            <Route path="/converters/text-case" element={<TextCaseTool />} />
+            <Route path="/generators/lorem-ipsum" element={<LoremIpsum />} />
+            <Route path="/converters/text-diff" element={<TextDiffTool />} />
+            <Route path="/converters/color-converter" element={<ColorConverter />} />
+            <Route path="/seo/meta-tags" element={<MetaTagGenerator />} />
+            <Route path="/seo/robots-txt" element={<RobotsTxtGenerator />} />
+            <Route path="/seo/sitemap-xml" element={<SitemapGenerator />} />
+            <Route path="/seo/open-graph" element={<OpenGraphGenerator />} />
+            <Route path="/encoders/image-to-base64" element={<ImageToBase64 />} />
+            <Route path="/encoders/base64-to-image" element={<Base64ToImage />} />
+            <Route path="/design/css-gradient" element={<CssGradientGenerator />} />
+            <Route path="/design/box-shadow" element={<BoxShadowGenerator />} />
+            <Route path="/converters/json-to-csv" element={<JsonToCsv />} />
+            <Route path="/converters/csv-to-json" element={<CsvToJson />} />
+            <Route path="/converters/xml-to-json" element={<XmlToJson />} />
+            <Route path="/generators/password-generator" element={<PasswordGenerator />} />
+            <Route path="/generators/hash-generator" element={<HashGenerator />} />
+            <Route path="/misc/minify-all" element={<MinifyAll />} />
+            <Route path="/misc/code-snippets" element={<CodeSnippetManager />} />
+            <Route path="/testers/api-tester" element={<ApiRequestTester />} />
+            <Route path="/cheatsheets/http-status" element={<HttpStatusChecker />} />
+            <Route path="/converters/md-to-html" element={<MarkdownToHtml />} />
+            <Route path="/converters/html-to-md" element={<HtmlToMarkdown />} />
+            <Route path="/formatters/sql-formatter" element={<SqlFormatter />} />
+            <Route path="/generators/cron-generator" element={<CronJobGenerator />} />
           </Routes>
+          </React.Suspense>
         </main>
         <Footer />
       </div>

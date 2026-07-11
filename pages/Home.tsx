@@ -28,6 +28,13 @@ const Home: React.FC = () => {
         <title>Dev Mini Tools | Fast, Local-First Developer Utilities</title>
         <meta name="description" content="A comprehensive suite of developer tools including JSON Formatter, CSS Minifier, Regex Tester, and more. All tools run locally in your browser for maximum privacy." />
         <link rel="canonical" href="https://devminitools.xyz/" />
+        <meta property="og:title" content="Dev Mini Tools | Fast, Local-First Developer Utilities" />
+        <meta property="og:description" content="A comprehensive suite of developer tools including JSON Formatter, CSS Minifier, Regex Tester, and more. All tools run locally in your browser for maximum privacy." />
+        <meta property="og:url" content="https://devminitools.xyz/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dev Mini Tools | Fast, Local-First Developer Utilities" />
+        <meta name="twitter:description" content="A comprehensive suite of developer tools including JSON Formatter, CSS Minifier, Regex Tester, and more. All tools run locally in your browser for maximum privacy." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -66,10 +73,10 @@ const Home: React.FC = () => {
               A focused toolbox for formatting, testing, and tidying code. Everything runs in your browser—secure, instant, and distraction-free.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link to="/json-formatter" className="px-7 py-3 rounded-xl bg-gradient-to-r from-brand-500 to-glow-600 text-white font-bold shadow-lg shadow-brand-500/30 hover:-translate-y-0.5 transition-transform">
+              <Link to="/formatters/json-formatter" className="px-7 py-3 rounded-xl bg-gradient-to-r from-brand-500 to-glow-600 text-white font-bold shadow-lg shadow-brand-500/30 hover:-translate-y-0.5 transition-transform">
                 Launch JSON Formatter
               </Link>
-              <Link to="/regex-tester" className="px-7 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-100 hover:border-brand-500 dark:hover:border-brand-400 transition-all">
+              <Link to="/testers/regex-tester" className="px-7 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-100 hover:border-brand-500 dark:hover:border-brand-400 transition-all">
                 Try Regex Tester
               </Link>
             </div>
@@ -127,89 +134,89 @@ const Home: React.FC = () => {
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">SEO Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <ToolCard title="Meta Tag Generator" description="Create essential SEO meta tags." icon="fa-tags" to="/meta-tags" color="bg-emerald-200" />
-              <ToolCard title="robots.txt Generator" description="Control crawler access." icon="fa-robot" to="/robots-txt" color="bg-slate-200" />
-              <ToolCard title="Sitemap XML Generator" description="Build sitemap.xml from paths." icon="fa-sitemap" to="/sitemap-xml" color="bg-yellow-200" />
-              <ToolCard title="Open Graph Generator" description="OG + Twitter card tags." icon="fa-share-square" to="/open-graph" color="bg-sky-200" />
+              <ToolCard title="Meta Tag Generator" description="Create essential SEO meta tags." icon="fa-tags" to="/seo/meta-tags" color="bg-emerald-200" />
+              <ToolCard title="robots.txt Generator" description="Control crawler access." icon="fa-robot" to="/seo/robots-txt" color="bg-slate-200" />
+              <ToolCard title="Sitemap XML Generator" description="Build sitemap.xml from paths." icon="fa-sitemap" to="/seo/sitemap-xml" color="bg-yellow-200" />
+              <ToolCard title="Open Graph Generator" description="OG + Twitter card tags." icon="fa-share-square" to="/seo/open-graph" color="bg-sky-200" />
             </div>
           </div>
 
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">Image & UI Helpers</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <ToolCard title="Image to Base64" description="Convert images to data URLs." icon="fa-file-image" to="/image-to-base64" color="bg-pink-200" />
-              <ToolCard title="Base64 to Image" description="Preview and download images." icon="fa-image" to="/base64-to-image" color="bg-purple-200" />
-              <ToolCard title="CSS Gradient Generator" description="Design linear/radial gradients." icon="fa-fill" to="/css-gradient" color="bg-indigo-200" />
-              <ToolCard title="Box Shadow Generator" description="Fine-tune modern shadows." icon="fa-square" to="/box-shadow" color="bg-orange-200" />
-              <ToolCard title="Color Converter" description="HEX ⇄ RGB ⇄ HSL." icon="fa-palette" to="/color-converter" color="bg-teal-200" />
+              <ToolCard title="Image to Base64" description="Convert images to data URLs." icon="fa-file-image" to="/encoders/image-to-base64" color="bg-pink-200" />
+              <ToolCard title="Base64 to Image" description="Preview and download images." icon="fa-image" to="/encoders/base64-to-image" color="bg-purple-200" />
+              <ToolCard title="CSS Gradient Generator" description="Design linear/radial gradients." icon="fa-fill" to="/design/css-gradient" color="bg-indigo-200" />
+              <ToolCard title="Box Shadow Generator" description="Fine-tune modern shadows." icon="fa-square" to="/design/box-shadow" color="bg-orange-200" />
+              <ToolCard title="Color Converter" description="HEX ⇄ RGB ⇄ HSL." icon="fa-palette" to="/converters/color-converter" color="bg-teal-200" />
             </div>
           </div>
 
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">Code & Format</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <ToolCard title="JSON Formatter / Minifier" description="Beautify and compact JSON quickly." icon="fa-brackets-curly" to="/json-formatter" color="bg-brand-100" />
-              <ToolCard title="HTML Beautifier" description="Make HTML readable with proper indent." icon="fa-code" to="/html-beautifier" color="bg-amber-200" />
-              <ToolCard title="HTML Minifier" description="Strip comments and collapse whitespace." icon="fa-compress" to="/html-minifier" color="bg-yellow-200" />
-              <ToolCard title="CSS Formatter" description="Indent and clean CSS for readability." icon="fa-brush" to="/css-formatter" color="bg-violet-200" />
-              <ToolCard title="CSS Minifier" description="Compress CSS for production." icon="fa-css3-alt" to="/css-minifier" color="bg-glow-500/40" />
-              <ToolCard title="JS Beautifier" description="Prettify JS/TS using Prettier." icon="fa-code-branch" to="/js-beautifier" color="bg-sky-200" />
-              <ToolCard title="JS Minifier" description="Minify JavaScript with Terser." icon="fa-bolt" to="/js-minifier" color="bg-indigo-200" />
+              <ToolCard title="JSON Formatter / Minifier" description="Beautify and compact JSON quickly." icon="fa-brackets-curly" to="/formatters/json-formatter" color="bg-brand-100" />
+              <ToolCard title="HTML Beautifier" description="Make HTML readable with proper indent." icon="fa-code" to="/formatters/html-beautifier" color="bg-amber-200" />
+              <ToolCard title="HTML Minifier" description="Strip comments and collapse whitespace." icon="fa-compress" to="/formatters/html-minifier" color="bg-yellow-200" />
+              <ToolCard title="CSS Formatter" description="Indent and clean CSS for readability." icon="fa-brush" to="/formatters/css-formatter" color="bg-violet-200" />
+              <ToolCard title="CSS Minifier" description="Compress CSS for production." icon="fa-css3-alt" to="/formatters/css-minifier" color="bg-glow-500/40" />
+              <ToolCard title="JS Beautifier" description="Prettify JS/TS using Prettier." icon="fa-code-branch" to="/formatters/js-beautifier" color="bg-sky-200" />
+              <ToolCard title="JS Minifier" description="Minify JavaScript with Terser." icon="fa-bolt" to="/formatters/js-minifier" color="bg-indigo-200" />
             </div>
           </div>
 
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">Encode / Decode</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <ToolCard title="Base64 Encoder / Decoder" description="Convert strings to/from Base64." icon="fa-exchange-alt" to="/base64-encoder-decoder" color="bg-emerald-200" />
-              <ToolCard title="URL Encoder / Decoder" description="Safely encode/decode URLs and params." icon="fa-link" to="/url-encoder" color="bg-indigo-200" />
-              <ToolCard title="HTML Encode / Decode" description="Escape or unescape HTML entities." icon="fa-shield-virus" to="/html-encoder" color="bg-slate-200" />
+              <ToolCard title="Base64 Encoder / Decoder" description="Convert strings to/from Base64." icon="fa-exchange-alt" to="/encoders/base64-encoder-decoder" color="bg-emerald-200" />
+              <ToolCard title="URL Encoder / Decoder" description="Safely encode/decode URLs and params." icon="fa-link" to="/encoders/url-encoder" color="bg-indigo-200" />
+              <ToolCard title="HTML Encode / Decode" description="Escape or unescape HTML entities." icon="fa-shield-virus" to="/encoders/html-encoder" color="bg-slate-200" />
             </div>
           </div>
 
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">Developer Utilities</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <ToolCard title="Regex Tester" description="Test regex with live highlights." icon="fa-search" to="/regex-tester" color="bg-pink-200" />
-              <ToolCard title="Regex Cheat Sheet" description="Quick reference for common tokens." icon="fa-list" to="/regex-cheats" color="bg-orange-200" />
-              <ToolCard title="Case Converter" description="Upper, lower, snake, kebab cases." icon="fa-text-height" to="/text-case" color="bg-blue-200" />
-              <ToolCard title="Lorem Ipsum Generator" description="Generate placeholder paragraphs." icon="fa-align-left" to="/lorem-ipsum" color="bg-purple-200" />
-              <ToolCard title="Text Diff Checker" description="Compare two texts and highlight changes." icon="fa-not-equal" to="/text-diff" color="bg-red-200" />
-              <ToolCard title="UUID Generator" description="Create multiple v4 UUIDs instantly." icon="fa-fingerprint" to="/uuid-generator" color="bg-lime-200" />
-              <ToolCard title="JWT Decoder" description="Decode JWT header and payload locally." icon="fa-shield-alt" to="/jwt-decoder" color="bg-cyan-200" />
-              <ToolCard title="Timestamp Converter" description="Convert Unix seconds/millis and ISO." icon="fa-clock" to="/timestamp-converter" color="bg-rose-200" />
-              <ToolCard title="Color Converter" description="Convert HEX, RGB, and HSL with preview." icon="fa-palette" to="/color-converter" color="bg-teal-200" />
+              <ToolCard title="Regex Tester" description="Test regex with live highlights." icon="fa-search" to="/testers/regex-tester" color="bg-pink-200" />
+              <ToolCard title="Regex Cheat Sheet" description="Quick reference for common tokens." icon="fa-list" to="/cheatsheets/regex-cheats" color="bg-orange-200" />
+              <ToolCard title="Case Converter" description="Upper, lower, snake, kebab cases." icon="fa-text-height" to="/converters/text-case" color="bg-blue-200" />
+              <ToolCard title="Lorem Ipsum Generator" description="Generate placeholder paragraphs." icon="fa-align-left" to="/generators/lorem-ipsum" color="bg-purple-200" />
+              <ToolCard title="Text Diff Checker" description="Compare two texts and highlight changes." icon="fa-not-equal" to="/converters/text-diff" color="bg-red-200" />
+              <ToolCard title="UUID Generator" description="Create multiple v4 UUIDs instantly." icon="fa-fingerprint" to="/generators/uuid-generator" color="bg-lime-200" />
+              <ToolCard title="JWT Decoder" description="Decode JWT header and payload locally." icon="fa-shield-alt" to="/security/jwt-decoder" color="bg-cyan-200" />
+              <ToolCard title="Timestamp Converter" description="Convert Unix seconds/millis and ISO." icon="fa-clock" to="/converters/timestamp-converter" color="bg-rose-200" />
+              <ToolCard title="Color Converter" description="Convert HEX, RGB, and HSL with preview." icon="fa-palette" to="/converters/color-converter" color="bg-teal-200" />
             </div>
           </div>
 
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">API & Data</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <ToolCard title="JSON to CSV Converter" description="Export JSON arrays as CSV." icon="fa-table" to="/json-to-csv" color="bg-green-200" />
-              <ToolCard title="CSV to JSON Converter" description="Parse CSV to JSON arrays." icon="fa-brackets-curly" to="/csv-to-json" color="bg-blue-200" />
-              <ToolCard title="XML to JSON Converter" description="Convert XML to JSON." icon="fa-code" to="/xml-to-json" color="bg-amber-200" />
+              <ToolCard title="JSON to CSV Converter" description="Export JSON arrays as CSV." icon="fa-table" to="/converters/json-to-csv" color="bg-green-200" />
+              <ToolCard title="CSV to JSON Converter" description="Parse CSV to JSON arrays." icon="fa-brackets-curly" to="/converters/csv-to-json" color="bg-blue-200" />
+              <ToolCard title="XML to JSON Converter" description="Convert XML to JSON." icon="fa-code" to="/converters/xml-to-json" color="bg-amber-200" />
             </div>
           </div>
 
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">Security & Productivity</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <ToolCard title="Password Generator" description="Generate strong passwords." icon="fa-key" to="/password-generator" color="bg-red-200" />
-              <ToolCard title="Hash Generator" description="MD5, SHA-1, SHA-256 hashes." icon="fa-hashtag" to="/hash-generator" color="bg-purple-200" />
-              <ToolCard title="Minify All" description="Minify HTML, CSS, JS together." icon="fa-compress-alt" to="/minify-all" color="bg-indigo-200" />
-              <ToolCard title="Code Snippet Manager" description="Save and organize snippets." icon="fa-save" to="/code-snippets" color="bg-teal-200" />
+              <ToolCard title="Password Generator" description="Generate strong passwords." icon="fa-key" to="/generators/password-generator" color="bg-red-200" />
+              <ToolCard title="Hash Generator" description="MD5, SHA-1, SHA-256 hashes." icon="fa-hashtag" to="/generators/hash-generator" color="bg-purple-200" />
+              <ToolCard title="Minify All" description="Minify HTML, CSS, JS together." icon="fa-compress-alt" to="/misc/minify-all" color="bg-indigo-200" />
+              <ToolCard title="Code Snippet Manager" description="Save and organize snippets." icon="fa-save" to="/misc/code-snippets" color="bg-teal-200" />
             </div>
           </div>
 
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">Bonus Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <ToolCard title="API Request Tester" description="Test REST APIs with custom headers." icon="fa-plug" to="/api-tester" color="bg-cyan-200" />
-              <ToolCard title="HTTP Status Checker" description="Reference for HTTP status codes." icon="fa-exclamation-circle" to="/http-status" color="bg-yellow-200" />
-              <ToolCard title="Markdown to HTML" description="Convert Markdown to HTML." icon="fa-file-code" to="/md-to-html" color="bg-green-200" />
-              <ToolCard title="HTML to Markdown" description="Convert HTML to Markdown." icon="fa-code" to="/html-to-md" color="bg-blue-200" />
-              <ToolCard title="SQL Formatter" description="Format SQL with indentation." icon="fa-database" to="/sql-formatter" color="bg-pink-200" />
-              <ToolCard title="Cron Job Generator" description="Generate cron expressions." icon="fa-clock" to="/cron-generator" color="bg-amber-200" />
+              <ToolCard title="API Request Tester" description="Test REST APIs with custom headers." icon="fa-plug" to="/testers/api-tester" color="bg-cyan-200" />
+              <ToolCard title="HTTP Status Checker" description="Reference for HTTP status codes." icon="fa-exclamation-circle" to="/cheatsheets/http-status" color="bg-yellow-200" />
+              <ToolCard title="Markdown to HTML" description="Convert Markdown to HTML." icon="fa-file-code" to="/converters/md-to-html" color="bg-green-200" />
+              <ToolCard title="HTML to Markdown" description="Convert HTML to Markdown." icon="fa-code" to="/converters/html-to-md" color="bg-blue-200" />
+              <ToolCard title="SQL Formatter" description="Format SQL with indentation." icon="fa-database" to="/formatters/sql-formatter" color="bg-pink-200" />
+              <ToolCard title="Cron Job Generator" description="Generate cron expressions." icon="fa-clock" to="/generators/cron-generator" color="bg-amber-200" />
             </div>
           </div>
         </div>
