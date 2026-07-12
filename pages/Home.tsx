@@ -73,10 +73,10 @@ const Home: React.FC = () => {
               A focused toolbox for formatting, testing, and tidying code. Everything runs in your browser—secure, instant, and distraction-free.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link to="/formatters/json-formatter" className="px-7 py-3 rounded-xl bg-gradient-to-r from-brand-500 to-glow-600 text-white font-bold shadow-lg shadow-brand-500/30 hover:-translate-y-0.5 transition-transform">
+              <Link to="/json-formatter" className="px-7 py-3 rounded-xl bg-gradient-to-r from-brand-500 to-glow-600 text-white font-bold shadow-lg shadow-brand-500/30 hover:-translate-y-0.5 transition-transform">
                 Launch JSON Formatter
               </Link>
-              <Link to="/testers/regex-tester" className="px-7 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-100 hover:border-brand-500 dark:hover:border-brand-400 transition-all">
+              <Link to="/regex-tester" className="px-7 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-100 hover:border-brand-500 dark:hover:border-brand-400 transition-all">
                 Try Regex Tester
               </Link>
             </div>
@@ -86,7 +86,7 @@ const Home: React.FC = () => {
                 <div>Data stays on device</div>
               </div>
               <div className="p-3 rounded-xl bg-white/80 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800">
-                <div className="text-2xl font-bold text-slate-900 dark:text-white">5 Tools</div>
+                <div className="text-2xl font-bold text-slate-900 dark:text-white">40+ Tools</div>
                 <div>Core dev workflows</div>
               </div>
               <div className="p-3 rounded-xl bg-white/80 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 col-span-2 sm:col-span-1">

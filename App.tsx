@@ -169,7 +169,7 @@ const Navbar = () => {
 
           <div className="flex items-center gap-2">
             <Link
-              to="/formatters/json-formatter"
+              to="/json-formatter"
               className="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:-translate-y-0.5 transition-transform shadow-lg shadow-slate-900/15 dark:shadow-white/20"
             >
               <i className="fas fa-play text-xs"></i>
@@ -199,9 +199,9 @@ const Footer = () => (
       <p className="text-slate-500 dark:text-slate-400">© 2026 Dev Mini Tools. Crafted for developers, built to stay local.</p>
       <div className="text-sm text-slate-400 space-x-4">
         <Link to="/" className="hover:text-brand-600 dark:hover:text-brand-400">Home</Link>
-        <Link to="/formatters/json-formatter" className="hover:text-brand-600 dark:hover:text-brand-400">JSON Formatter</Link>
-        <Link to="/formatters/css-minifier" className="hover:text-brand-600 dark:hover:text-brand-400">CSS Minifier</Link>
-        <Link to="/testers/regex-tester" className="hover:text-brand-600 dark:hover:text-brand-400">Regex Tester</Link>
+        <Link to="/json-formatter" className="hover:text-brand-600 dark:hover:text-brand-400">JSON Formatter</Link>
+        <Link to="/css-minifier" className="hover:text-brand-600 dark:hover:text-brand-400">CSS Minifier</Link>
+        <Link to="/regex-tester" className="hover:text-brand-600 dark:hover:text-brand-400">Regex Tester</Link>
       </div>
     </div>
   </footer>
@@ -225,6 +225,7 @@ const App: React.FC = () => {
           <React.Suspense fallback={<div className="flex h-[60vh] items-center justify-center text-slate-400"><i className="fas fa-circle-notch fa-spin text-3xl"></i></div>}>
           <Routes>
             <Route path="/" element={<Home />} />
+            {/* Canonical categorized routes */}
             <Route path="/formatters/json-formatter" element={<JsonFormatter />} />
             <Route path="/formatters/css-formatter" element={<CssFormatter />} />
             <Route path="/formatters/css-minifier" element={<CssMinifier />} />
@@ -265,6 +266,47 @@ const App: React.FC = () => {
             <Route path="/converters/html-to-md" element={<HtmlToMarkdown />} />
             <Route path="/formatters/sql-formatter" element={<SqlFormatter />} />
             <Route path="/generators/cron-generator" element={<CronJobGenerator />} />
+            {/* Flat URL aliases — these are the URLs Vercel serves from dist/*.html */}
+            <Route path="/json-formatter" element={<JsonFormatter />} />
+            <Route path="/css-formatter" element={<CssFormatter />} />
+            <Route path="/css-minifier" element={<CssMinifier />} />
+            <Route path="/html-beautifier" element={<HtmlBeautifier />} />
+            <Route path="/html-minifier" element={<HtmlMinifier />} />
+            <Route path="/js-beautifier" element={<JsBeautifier />} />
+            <Route path="/js-minifier" element={<JsMinifier />} />
+            <Route path="/base64-encoder-decoder" element={<Base64Tool />} />
+            <Route path="/url-encoder" element={<UrlEncoder />} />
+            <Route path="/html-encoder" element={<HtmlEncoder />} />
+            <Route path="/regex-tester" element={<RegexTester />} />
+            <Route path="/regex-cheats" element={<RegexCheatSheet />} />
+            <Route path="/uuid-generator" element={<UuidTool />} />
+            <Route path="/jwt-decoder" element={<JwtDecoder />} />
+            <Route path="/timestamp-converter" element={<TimestampTool />} />
+            <Route path="/text-case" element={<TextCaseTool />} />
+            <Route path="/lorem-ipsum" element={<LoremIpsum />} />
+            <Route path="/text-diff" element={<TextDiffTool />} />
+            <Route path="/color-converter" element={<ColorConverter />} />
+            <Route path="/meta-tags" element={<MetaTagGenerator />} />
+            <Route path="/robots-txt" element={<RobotsTxtGenerator />} />
+            <Route path="/sitemap-xml" element={<SitemapGenerator />} />
+            <Route path="/open-graph" element={<OpenGraphGenerator />} />
+            <Route path="/image-to-base64" element={<ImageToBase64 />} />
+            <Route path="/base64-to-image" element={<Base64ToImage />} />
+            <Route path="/css-gradient" element={<CssGradientGenerator />} />
+            <Route path="/box-shadow" element={<BoxShadowGenerator />} />
+            <Route path="/json-to-csv" element={<JsonToCsv />} />
+            <Route path="/csv-to-json" element={<CsvToJson />} />
+            <Route path="/xml-to-json" element={<XmlToJson />} />
+            <Route path="/password-generator" element={<PasswordGenerator />} />
+            <Route path="/hash-generator" element={<HashGenerator />} />
+            <Route path="/minify-all" element={<MinifyAll />} />
+            <Route path="/code-snippets" element={<CodeSnippetManager />} />
+            <Route path="/api-tester" element={<ApiRequestTester />} />
+            <Route path="/http-status" element={<HttpStatusChecker />} />
+            <Route path="/md-to-html" element={<MarkdownToHtml />} />
+            <Route path="/html-to-md" element={<HtmlToMarkdown />} />
+            <Route path="/sql-formatter" element={<SqlFormatter />} />
+            <Route path="/cron-generator" element={<CronJobGenerator />} />
           </Routes>
           </React.Suspense>
         </main>

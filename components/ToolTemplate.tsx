@@ -37,7 +37,7 @@ const ToolTemplate: React.FC<ToolTemplateProps> = ({ title, description, childre
   return (
     <>
       <Helmet>
-        <title>{title} | Dev Mini Tools</title>
+        <title>{`${title} | Dev Mini Tools`}</title>
         <meta name="description" content={description} />
         <link rel="canonical" href={url} />
         <meta property="og:title" content={`${title} | Dev Mini Tools`} />
