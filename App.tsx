@@ -2,46 +2,46 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
-const JsonFormatter = React.lazy(() => import('./pages/JsonFormatter'));
-const CssMinifier = React.lazy(() => import('./pages/CssMinifier'));
-const HtmlBeautifier = React.lazy(() => import('./pages/HtmlBeautifier'));
-const Base64Tool = React.lazy(() => import('./pages/Base64Tool'));
-const RegexTester = React.lazy(() => import('./pages/RegexTester'));
-const UuidTool = React.lazy(() => import('./pages/UuidTool'));
-const JwtDecoder = React.lazy(() => import('./pages/JwtDecoder'));
-const TimestampTool = React.lazy(() => import('./pages/TimestampTool'));
-const UrlEncoder = React.lazy(() => import('./pages/UrlEncoder'));
-const TextCaseTool = React.lazy(() => import('./pages/TextCaseTool'));
-const ColorConverter = React.lazy(() => import('./pages/ColorConverter'));
-const HtmlMinifier = React.lazy(() => import('./pages/HtmlMinifier'));
-const CssFormatter = React.lazy(() => import('./pages/CssFormatter'));
-const JsBeautifier = React.lazy(() => import('./pages/JsBeautifier'));
-const JsMinifier = React.lazy(() => import('./pages/JsMinifier'));
-const HtmlEncoder = React.lazy(() => import('./pages/HtmlEncoder'));
-const RegexCheatSheet = React.lazy(() => import('./pages/RegexCheatSheet'));
-const LoremIpsum = React.lazy(() => import('./pages/LoremIpsum'));
-const TextDiffTool = React.lazy(() => import('./pages/TextDiffTool'));
-const MetaTagGenerator = React.lazy(() => import('./pages/MetaTagGenerator'));
-const RobotsTxtGenerator = React.lazy(() => import('./pages/RobotsTxtGenerator'));
-const SitemapGenerator = React.lazy(() => import('./pages/SitemapGenerator'));
-const OpenGraphGenerator = React.lazy(() => import('./pages/OpenGraphGenerator'));
-const ImageToBase64 = React.lazy(() => import('./pages/ImageToBase64'));
-const Base64ToImage = React.lazy(() => import('./pages/Base64ToImage'));
-const CssGradientGenerator = React.lazy(() => import('./pages/CssGradientGenerator'));
-const BoxShadowGenerator = React.lazy(() => import('./pages/BoxShadowGenerator'));
-const JsonToCsv = React.lazy(() => import('./pages/JsonToCsv'));
-const CsvToJson = React.lazy(() => import('./pages/CsvToJson'));
-const XmlToJson = React.lazy(() => import('./pages/XmlToJson'));
-const PasswordGenerator = React.lazy(() => import('./pages/PasswordGenerator'));
-const HashGenerator = React.lazy(() => import('./pages/HashGenerator'));
-const MinifyAll = React.lazy(() => import('./pages/MinifyAll'));
-const CodeSnippetManager = React.lazy(() => import('./pages/CodeSnippetManager'));
-const ApiRequestTester = React.lazy(() => import('./pages/ApiRequestTester'));
-const HttpStatusChecker = React.lazy(() => import('./pages/HttpStatusChecker'));
-const MarkdownToHtml = React.lazy(() => import('./pages/MarkdownToHtml'));
-const HtmlToMarkdown = React.lazy(() => import('./pages/HtmlToMarkdown'));
-const SqlFormatter = React.lazy(() => import('./pages/SqlFormatter'));
-const CronJobGenerator = React.lazy(() => import('./pages/CronJobGenerator'));
+import JsonFormatter from './pages/JsonFormatter';
+import CssMinifier from './pages/CssMinifier';
+import HtmlBeautifier from './pages/HtmlBeautifier';
+import Base64Tool from './pages/Base64Tool';
+import RegexTester from './pages/RegexTester';
+import UuidTool from './pages/UuidTool';
+import JwtDecoder from './pages/JwtDecoder';
+import TimestampTool from './pages/TimestampTool';
+import UrlEncoder from './pages/UrlEncoder';
+import TextCaseTool from './pages/TextCaseTool';
+import ColorConverter from './pages/ColorConverter';
+import HtmlMinifier from './pages/HtmlMinifier';
+import CssFormatter from './pages/CssFormatter';
+import JsBeautifier from './pages/JsBeautifier';
+import JsMinifier from './pages/JsMinifier';
+import HtmlEncoder from './pages/HtmlEncoder';
+import RegexCheatSheet from './pages/RegexCheatSheet';
+import LoremIpsum from './pages/LoremIpsum';
+import TextDiffTool from './pages/TextDiffTool';
+import MetaTagGenerator from './pages/MetaTagGenerator';
+import RobotsTxtGenerator from './pages/RobotsTxtGenerator';
+import SitemapGenerator from './pages/SitemapGenerator';
+import OpenGraphGenerator from './pages/OpenGraphGenerator';
+import ImageToBase64 from './pages/ImageToBase64';
+import Base64ToImage from './pages/Base64ToImage';
+import CssGradientGenerator from './pages/CssGradientGenerator';
+import BoxShadowGenerator from './pages/BoxShadowGenerator';
+import JsonToCsv from './pages/JsonToCsv';
+import CsvToJson from './pages/CsvToJson';
+import XmlToJson from './pages/XmlToJson';
+import PasswordGenerator from './pages/PasswordGenerator';
+import HashGenerator from './pages/HashGenerator';
+import MinifyAll from './pages/MinifyAll';
+import CodeSnippetManager from './pages/CodeSnippetManager';
+import ApiRequestTester from './pages/ApiRequestTester';
+import HttpStatusChecker from './pages/HttpStatusChecker';
+import MarkdownToHtml from './pages/MarkdownToHtml';
+import HtmlToMarkdown from './pages/HtmlToMarkdown';
+import SqlFormatter from './pages/SqlFormatter';
+import CronJobGenerator from './pages/CronJobGenerator';
 
 const Navbar = () => {
   const [isDark, setIsDark] = useState(true);
@@ -222,7 +222,6 @@ const App: React.FC = () => {
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
-          <React.Suspense fallback={<div className="flex h-[60vh] items-center justify-center text-slate-400"><i className="fas fa-circle-notch fa-spin text-3xl"></i></div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             {/* Canonical categorized routes */}
@@ -308,7 +307,6 @@ const App: React.FC = () => {
             <Route path="/sql-formatter" element={<SqlFormatter />} />
             <Route path="/cron-generator" element={<CronJobGenerator />} />
           </Routes>
-          </React.Suspense>
         </main>
         <Footer />
       </div>
